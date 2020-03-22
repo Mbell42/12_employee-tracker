@@ -30,3 +30,5 @@ Progress:
 2020.03.21_2001 - I added dependencies to 'index.js', then built the 'dbConnect' function in 'db-connect.js'.  I then added the MySql code necessary to create the schema and tables in 'schema.sql'.  
 
 2020.03.21_2038 - I added'db-actions.js'.  Then I updated 'db-classes.js' to include empty classes for 'Employee','EmployeeRole', and 'Department'.  I then continued to pseudo-code in 'index.js' and 'db-actions.js'.
+
+2020.03.21_2230 - I completed constructor functions and added empty action functions for each class in 'db-classes.js', and then deleted 'db-actions.js'.  For 'index.js', I began constructing the initialize function.

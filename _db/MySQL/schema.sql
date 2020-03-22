@@ -4,11 +4,11 @@
 /* ALTER USER 'root'@'localHost' IDENTIFIED WITH mysql_native_password BY 'root'; */
 
 /* Create database */
-DROP DATABASE IF EXISTS employeeDB;
+DROP DATABASE IF EXISTS employeesDB;
 
-CREATE DATABASE employeeDB;
+CREATE DATABASE employeesDB;
 
-USE employeeDB;
+USE employeesDB;
 
 /* Create tables */
 /* Create employee table */
