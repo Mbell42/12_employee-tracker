@@ -12,9 +12,13 @@ class Employee {
         this.lastName = lastName;
         this.roleId = roleId;
         this.managerId = managerId;
-    }
-    viewEmployee(data) {
-    
+    };
+    viewEmployee() {
+        console.log("Viewing Employee Roster...");
+        dbConnect.query("SELECT * FROM employee", (err,res) => {
+            if(err) throw(err);
+            console.log(res);
+        });
     };
     addEmployee(data) {
         dbConnect.query(`INSERT INTO employee (id, first_name, last_name, role_id, manager_id)
@@ -23,14 +27,17 @@ class Employee {
             if(err) throw(err);
         })
         console.log(`${this.firstName} ${this.lastName} has been added successfully!`);
-
     };
     deleteEmployee(data) {
-
+        dbConnect.query("DELETE FROM employee WHERE ?", {id: data.id },
+        (err) => {
+            if(err) throw(err);
+        })
+        console.log(`${this.firstName} ${this.lastName} has been removed successfully!`);
     };
-    updateEmployeeRole(data) {
+    // updateEmployeeRole(data) {
 
-    };
+    // };
 };
 
 class EmployeeRole {
@@ -39,15 +46,27 @@ class EmployeeRole {
         this.title = title;
         this.salary = salary;
         this.departmentId = departmentId
-    }
+    };
     viewRole() {
-
+        console.log("Viewing Employee Roles...");
+        dbConnect.query("SELECT * FROM role", (err,res) => {
+            if(err) throw(err);
+            console.log(res);
+        });
     };
-    addRole() {
-
+    addRole(data) {
+        dbConnect.query(`INSERT INTO emlpoye_role (id, title, salary, department_id)
+        VALUES (${this.id}, ${JSON.stringify(this.title)}, ${this.salary}, ${this.departmentId})`,
+        (err) => {
+            if(err) throw(err);
+        })
+        console.log(`${this.title} has been added to Roles!`);
     };
-    deleteRole() {
-
+    deleteRole(data) {
+        dbConnect.query("DELETE FROM employee WHERE ?", { id: data.id },
+        (err) => {
+            if(err) throw(err);
+        })
     };
 };
 
@@ -55,7 +74,7 @@ class Department {
     constructor(id, departmentName) {
         this.id = id;
         this.department_name = department_name;
-    }
+    };
     viewDepartment() {
 
     };
@@ -67,5 +86,9 @@ class Department {
     };
 };
 
-
-module.exports = Employee, EmployeeRole, Department;
+// EXPORTS
+export {
+    Employee,
+    EmployeeRole,
+    Department
+};

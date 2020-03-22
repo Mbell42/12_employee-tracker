@@ -15,4 +15,5 @@ const dbConnect = mysql.createConnection({
     database: employeeDB
 });
 
+// EXPORTS
 exports.dbConnect = dbConnect;

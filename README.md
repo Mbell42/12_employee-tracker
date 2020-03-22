@@ -32,3 +32,5 @@ Progress:
 2020.03.21_2038 - I added'db-actions.js'.  Then I updated 'db-classes.js' to include empty classes for 'Employee','EmployeeRole', and 'Department'.  I then continued to pseudo-code in 'index.js' and 'db-actions.js'.
 
 2020.03.21_2230 - I completed constructor functions and added empty action functions for each class in 'db-classes.js', and then deleted 'db-actions.js'.  For 'index.js', I began constructing the initialize function.
+
+2020.03.21_2316 - I added the rest of the cases to the case switch in 'index.js' and then added functions to the classes 'Employee' and 'EmployeeRole' in 'db-classes.js'.

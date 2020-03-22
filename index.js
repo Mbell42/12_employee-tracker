@@ -1,10 +1,12 @@
 // Grabbing Dependencies
 
-const inquirer = require('inquirer');
-const mysql = require('mysql');
-const dbConnect = require('./_db/lib/db-connect');
-
-import { dbConnect } from "./db-connect";
+const inquirer = require("inquirer");
+const mysql = require("mysql");
+const db_Connect = require('./_db/lib/db-connect');
+import Employee from "./_db/lib/db-classes";
+import EmployeeRole from "./_db/lib/db-classes";
+import Department from "./_db/lib/db-classes";
+import { dbConnect } from "./_db/lib/db-connect";
 
 // When program is run
 // Connect to database
@@ -15,16 +17,6 @@ dbConnect.connect(function(err) {
     console.log("connected to employees_DB successfully");
     initialize();
 });
-
-
-
-
-// Prompt user for which action to take
-// Based on user's answer, run the appropriate function,
-//either viewing a table or affecting a table entry.
-
-
-
 
 // FUNCTIONS
 function initialize () {
@@ -38,16 +30,36 @@ function initialize () {
             "View Departments",
             "View Roles",
             "Add Employee",
-            "Update Employee Role",
-            "Exit"
+            // "Update Employee Role",
+            "EXIT"
         ]
     })
     // Based on which action user chooses, run the appropriate function
+    //either viewing a table or affecting a table entry.
     .then(function(answer) {
         switch (answer.menu) {
             case "View Employee Roster":
+                viewEmployee();
+                break;
+            case "View Roles":
+                viewRole();
+                break;
+            case "View Departments":
                 viewDepartment();
                 break;
+            case "Add Employee":
+                addEmployee();
+                break;
+            case "Add Role":
+                addRole();
+                break;
+            case "Add Department":
+                addDepartment();
+                break;   
+            case "EXIT":
+                exit();
+                break;                
+
         }
     })
 }
