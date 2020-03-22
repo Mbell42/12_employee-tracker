@@ -8,7 +8,6 @@
 /* department inserts */
 
 
-/* SELECTIONS */
-/* Selections from tables */ 
+
 
 

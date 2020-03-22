@@ -26,3 +26,5 @@ Progress:
 2020.03.17_0808 - Initial Commit.  Created and cloned repository to my local drive.  I then imported 'assets' folder from class files.
 
 2020.03.21_1856 - Completed research for assignment (12 hours), then created necessary folder structure and files.  I then added '.gitignore file' and initialized npm 'package.json', and began pseudo-coding.
+
+2020.03.21_2001 - I added dependencies to 'index.js', then built the 'dbConnect' function in 'db-connect.js'.  I then added the MySql code necessary to create the schema and tables in 'schema.sql'.  
