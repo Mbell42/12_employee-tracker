@@ -3,7 +3,7 @@
 const inquirer = require("inquirer");
 const mysql = require("mysql");
 const db_Connect = require('./_db/lib/db-connect');
-import Employee from "./_db/lib/db-classes";
+import Employee  from "./_db/lib/db-classes";
 import EmployeeRole from "./_db/lib/db-classes";
 import Department from "./_db/lib/db-classes";
 import { dbConnect } from "./_db/lib/db-connect";
@@ -57,7 +57,7 @@ function initialize () {
                 addDepartment();
                 break;   
             case "EXIT":
-                exit();
+                dbConnect.end();
                 break;                
 
         }

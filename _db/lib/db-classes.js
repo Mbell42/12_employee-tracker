@@ -1,9 +1,10 @@
 // DATABASE CLASSES
 
+// const db_Connect = require('./_db/lib/db-connect');
 import { dbConnect } from "./db-connect";
 
 // Connect to database
-dbConnect();
+// dbConnect();
 
 // Create Employee class
 class Employee {
@@ -87,7 +88,7 @@ class Department {
 };
 
 // EXPORTS
-export {
+export default {
     Employee,
     EmployeeRole,
     Department

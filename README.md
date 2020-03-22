@@ -34,3 +34,5 @@ Progress:
 2020.03.21_2230 - I completed constructor functions and added empty action functions for each class in 'db-classes.js', and then deleted 'db-actions.js'.  For 'index.js', I began constructing the initialize function.
 
 2020.03.21_2316 - I added the rest of the cases to the case switch in 'index.js' and then added functions to the classes 'Employee' and 'EmployeeRole' in 'db-classes.js'.
+
+2020.03.21_2325 - I have run into an issue with trying to import multiple classes from a single external .js file.  I will submit the assignment as it is to make sure that I have a submission in, and then will attempt to fix the issue.  After that, I will complete 'seeds.sql'.
