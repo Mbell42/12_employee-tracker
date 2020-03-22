@@ -28,3 +28,5 @@ Progress:
 2020.03.21_1856 - Completed research for assignment (12 hours), then created necessary folder structure and files.  I then added '.gitignore file' and initialized npm 'package.json', and began pseudo-coding.
 
 2020.03.21_2001 - I added dependencies to 'index.js', then built the 'dbConnect' function in 'db-connect.js'.  I then added the MySql code necessary to create the schema and tables in 'schema.sql'.  
+
+2020.03.21_2038 - I added'db-actions.js'.  Then I updated 'db-classes.js' to include empty classes for 'Employee','EmployeeRole', and 'Department'.  I then continued to pseudo-code in 'index.js' and 'db-actions.js'.
